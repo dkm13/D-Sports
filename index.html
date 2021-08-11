@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/049c2c6974.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/png" href="images/logo-w.png">
+    <title>D-Sports</title>
+
+
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  
+     <script>
+         $(document).ready(function(){
+           $('#icon').click(function(){
+              $('ul').toggleClass('show')
+           });
+         });
+     </script>
+  
+</head>
+<body>
+    
+    <nav>
+       <a id="default" href="#"><img class="logo" src="images/logo-bg1.png" alt="logo"></a>
+        <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><abbr title="Dark/Light mode"><i id="icon1" onclick="change('icon1')" class="fas fa-moon" aria hidden="true"></i></abbr></li>
+        </ul>
+        <label id="icon">
+            <i id="ic2" onclick="reChange('ic2')" class="fas fa-bars"></i>
+        </label>
+    </nav>
+
+    <section class="top-news">
+        <img src="https://th.bing.com/th/id/R.d60fee08587644a667641998ec3aca62?rik=tsI0ubUG0fW%2fXw&pid=ImgRaw&r=0" alt="Messi to psg">
+        <div class="top-news-text">
+            <h2>Lionel Messi to PSG: CONFIRMED</h2>
+            <p>Its official lionel Messi is transfered to <abbr title="Paris-Saint-germain">PSG</abbr> with a 2-year contract
+            it means Messi will stay in Paris until 2023.In this contract messi will earn 32$-millions a year.The 6 times ballon
+        Dor winner comes to PSG from Barcelona where he spent all of his football career.</p>
+           <!--<button id="top-news-btn">Read more</button>-->
+
+           <div class="img-mp">
+           <img id="messi" src="https://i.pinimg.com/736x/01/65/f8/0165f839d88a36459c430f341c4521ee.jpg">
+           <i class="fas fa-arrow-circle-right"></i>
+           <img id="psg" src="https://th.bing.com/th/id/R.3a2e794c7f1dcd4d6d248400f31edb56?rik=%2bulcGWYdiUwgIw&riu=http%3a%2f%2fwww.iesanetwork.com%2fl.vu%2fimg%2fpsg.png&ehk=M91HS7OQbXZJZpvO6GTr5Qtk7r16p%2fwsPHRunB1Lj9I%3d&risl=&pid=ImgRaw&r=0">
+          </div>
+
+        </div>
+    </section>
+
+
+
+    <script>
+        function change (iconID){
+            if(document.getElementById(iconID).className=="fas fa-moon"){
+                document.getElementById(iconID).className = "fas fa-lightbulb";
+            }else{
+                document.getElementById(iconID).className = "fas fa-moon";
+            }
+            var element = document.body;
+            element.classList.toggle("dark")
+        }
+
+        function reChange (iconID){
+            if(document.getElementById(iconID).className=="fas fa-times"){
+                document.getElementById(iconID).className = "fas fa-bars";
+            }else{
+                document.getElementById(iconID).className = "fas fa-times";
+            }
+}
+
+    </script>
+</body>
+</html>

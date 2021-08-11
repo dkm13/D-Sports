@@ -1,0 +1,245 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(240, 230, 230);
+    margin: 0;
+    padding: 0;
+}
+nav{
+    height: 80px;
+    width: 100%;
+    background-color: rgb(39, 8, 78);
+    margin: 0;
+    padding: 0;
+    clear: both;
+}
+nav .logo{
+    width: 280px;
+    height: 190px;
+    margin: -50px 0 0 0;
+    cursor: pointer;
+}
+nav ul{
+    float: right;
+    margin-right: 40px;
+}
+nav ul li{
+    display: inline-block;
+    margin: 0 8px;
+    line-height: 80px;
+}
+nav ul li a{
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    padding: 7px 10px;
+    border-radius: 3px;
+}
+a.active,a:hover{
+    border: 1px solid white;
+    transition: .5s;
+}
+nav #icon{
+    color: white;
+    font-size: 30px;
+    line-height: 80px;
+    float: right;
+    margin: 0 40px 0 0;
+    cursor: pointer;
+    display: none;
+}
+
+nav #default{
+    border: none;
+}
+nav #icon1{
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+.dark {
+    background-color: #333;
+    color: white;
+}
+.top-news {
+    width: 99%;
+    height: 440px;
+    clear: both;
+    margin: auto;
+    margin-top: 7px;
+    border: 2px solid gray;
+    display: flex;
+    flex-direction: row;
+}
+.top-news img{
+    width: 50%;
+    height: 98.7%;
+    margin: 3px;
+}
+.top-news .top-news-text {
+    width: 40%;
+    margin: 36px auto;
+}
+.top-news .top-news-text h2{
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+.top-news .top-news-text p{
+    font-size: 18px;
+}
+.top-news .top-news-text #messi{
+    width: 150px;
+    height: 150px;
+    border-radius:  50%;
+    border: 4px solid blue;
+}
+.top-news .top-news-text #psg {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.top-news .top-news-text i{
+    font-size: 60px;
+    margin: 0 14px 0 14px;
+}
+@media (max-width: 1048px) {
+    nav ul{
+        margin-right: 20px;
+    }
+    nav ul li a{
+        font-size: 17px;
+    }
+    .top-news img{
+        width: 460px;
+    }
+    .top-news .top-news-text {
+        margin-top: 10px;
+        width: 50%;
+    }
+    .top-news .top-news-text p{
+        font-size: 17px;
+    }
+    .top-news .top-news-text i{
+        margin: auto;
+    }
+}
+@media (max-width: 865px) {
+    nav #icon {
+        display: inline-block;
+    }
+    nav ul{
+        position: absolute;
+        width: 260px;
+        height: 100vh;
+        background-color: rgb(58, 16, 109);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        border-top: 1px solid white;
+        transition: all .5s;
+        border-right: 4px solid green;
+        border-bottom: 4px solid green;
+    }
+    nav ul li {
+        display: block;
+        margin: 40px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    nav ul.show{
+        left: 0;
+    }
+    .top-news {
+       margin: 5px auto;
+       padding: 0;
+       clear: both;
+       flex-direction: column;
+       width: 90%;
+       height: 800px;
+    }
+    .top-news img{
+        width: 97%;
+        margin: auto;
+        margin-top: 5px;
+    }
+    .top-news .top-news-text{
+        width: 83%;
+    }
+}
+@media (max-width: 500px) {
+    nav ul{
+        width: 250px;
+    }
+    .top-news {
+        height: 830px;
+    }
+   
+    .img-mp{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 352px) {
+  nav #icon {
+      margin-right: 20px;
+      font-size: 25px;
+  }
+  nav .logo {
+    padding-right: 10px;
+    width: 220px;
+    height: 140px;
+    margin-top: -27px;
+    margin-right: 0;
+    margin-left: -20px;
+  }
+  nav ul{
+      width: 200px;
+      height: 90vh;
+  }
+  .top-news{
+      height: 880px;
+  }
+  .top-news .top-news-text p {
+      font-size: 16px;
+   }
+}
+@media (max-width: 242px) {
+    nav .logo{
+        width: 150px;
+        height: 95px;
+        margin-top: -8px;
+    }
+    .top-news {
+        height: 908px;
+        width: 97%;
+    }
+    .top-news .top-news-text {
+        width: 90%;
+    }
+    .top-news .top-news-text h2{
+        font-size: 24px;
+    }
+}
+@media (max-width: 205px) {
+    nav ul {
+        left: -200%;
+    }
+    nav #icon {
+        font-size: 16px;
+    }
+    nav .logo{
+        width: 110px;
+        height: 55px;
+        margin-top: 10px;
+        margin-left: -4px;
+    }
+}
